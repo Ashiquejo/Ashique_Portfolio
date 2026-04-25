@@ -1,0 +1,28 @@
+[
+  {
+    "id": "project-neo",
+    "title": "Project Neo",
+    "description": "LLM-Powered Voice-Responsive Robot. Architected an embodied AI system integrating the Gemini API with Raspberry Pi for real-time voice interaction. Designed a low-latency pipeline for speech input, LLM inference, and robotic actuation under hardware constraints.",
+    "tech": ["Python", "Gemini API", "Raspberry Pi 4B", "LLMs"]
+  },
+  {
+    "id": "farmgrid",
+    "title": "FarmGrid",
+    "description": "Agricultural Technology Hackathon Project. Spearheaded system design translating agricultural challenges into technical architectures under strict time constraints.",
+    "tech": ["System Architecture", "Rapid Prototyping", "Design Patterns"]
+  },
+  {
+    "id": "neural-nexus",
+    "title": "Neural Nexus Game",
+    "description": "Built an interactive web system emphasizing user engagement and human-centered design principles.",
+    "tech": ["Web Technologies", "UI/UX", "Interactive Design"],
+    "github": "https://github.com/Ashiquejo/nerual-nexus-game",
+    "demo": "https://ashiquejo.github.io/nerual-nexus-game/"
+  },
+  {
+    "id": "mini-e-atv",
+    "title": "Mini E-ATV",
+    "description": "Electric All-Terrain Vehicle. Engineered a mini electric ATV applying interdisciplinary system thinking across mechanical and control concepts.",
+    "tech": ["Hardware", "Mechatronics", "Control Systems"]
+  }
+]
