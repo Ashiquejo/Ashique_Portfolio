@@ -15,23 +15,23 @@ export default function Contact() {
   const handleSend = (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.current) return;
-    
+
     setStatus("loading");
 
     // Replace these placeholders with your actual EmailJS credentials
-    emailjs.sendForm('SERVICE_ID', 'TEMPLATE_ID', form.current, 'PUBLIC_KEY')
+    emailjs.sendForm('service_ge7zeg9', 'template_n6hbg5o', form.current, 'FEtNsL5lOXdAx_ddd')
       .then((result) => {
-          console.log(result.text);
-          setStatus("success");
-          setName("");
-          setEmail("");
-          setSubject("");
-          setMessage("");
-          alert("Message sent successfully!");
+        console.log(result.text);
+        setStatus("success");
+        setName("");
+        setEmail("");
+        setSubject("");
+        setMessage("");
+        alert("Message sent successfully!");
       }, (error) => {
-          console.log(error.text);
-          setStatus("error");
-          alert("Failed to send the message. Please try again.");
+        console.log(error.text);
+        setStatus("error");
+        alert("Failed to send the message. Please try again.");
       });
   };
 
@@ -40,24 +40,24 @@ export default function Contact() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16 w-full">
         <section className="space-y-8">
           <div>
-             <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               className="text-5xl font-bold tracking-tighter mb-4"
-             >
-              Let's <br/>Connect.
-             </motion.h2>
-             <motion.p 
+            >
+              Let's <br />Connect.
+            </motion.h2>
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
               className="text-text-muted text-lg"
-             >
+            >
               Whether you have a complex system to build or just want to discuss the future of AI interfaces, my inbox is open.
-             </motion.p>
+            </motion.p>
           </div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
@@ -77,7 +77,7 @@ export default function Contact() {
           </motion.div>
         </section>
 
-        <motion.section 
+        <motion.section
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.3 }}
@@ -86,10 +86,10 @@ export default function Contact() {
           <form ref={form} className="space-y-6" onSubmit={handleSend}>
             <div className="space-y-2">
               <label htmlFor="name" className="text-sm font-medium font-mono text-text-muted">Name Sequence</label>
-              <input 
+              <input
                 id="name"
                 name="name"
-                type="text" 
+                type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
@@ -97,13 +97,13 @@ export default function Contact() {
                 placeholder="Enter your name"
               />
             </div>
-            
+
             <div className="space-y-2">
               <label htmlFor="email" className="text-sm font-medium font-mono text-text-muted">Return Address</label>
-              <input 
+              <input
                 id="email"
                 name="email"
-                type="email" 
+                type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -114,10 +114,10 @@ export default function Contact() {
 
             <div className="space-y-2">
               <label htmlFor="subject" className="text-sm font-medium font-mono text-text-muted">Subject</label>
-              <input 
+              <input
                 id="subject"
                 name="subject"
-                type="text" 
+                type="text"
                 value={subject}
                 onChange={(e) => setSubject(e.target.value)}
                 required
@@ -128,7 +128,7 @@ export default function Contact() {
 
             <div className="space-y-2">
               <label htmlFor="message" className="text-sm font-medium font-mono text-text-muted">Payload</label>
-              <textarea 
+              <textarea
                 id="message"
                 name="message"
                 rows={4}
@@ -141,7 +141,7 @@ export default function Contact() {
             </div>
 
             <button disabled={status === "loading"} type="submit" className="group flex items-center gap-2 text-g-blue font-mono font-bold mt-8 hover:text-g-blue/80 transition-colors cursor-none disabled:opacity-50 disabled:cursor-not-allowed">
-              {status === "loading" ? "Transmitting..." : "Execute Send"} 
+              {status === "loading" ? "Transmitting..." : "Execute Send"}
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
           </form>

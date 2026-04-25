@@ -12,7 +12,7 @@ export default function Resume() {
       <div className="flex items-center justify-between pl-1 mb-8">
         <h2 className="text-3xl font-bold tracking-tight">Resume</h2>
         <div className="flex gap-4">
-          <a 
+          <a
             href="/Resume.pdf"
             download="Ashique_P_Jo_Resume.pdf"
             className="flex items-center gap-2 px-4 py-2 bg-g-blue text-white rounded-lg hover:bg-g-blue/90 font-medium transition-colors cursor-none print:hidden uppercase tracking-wider text-sm"
@@ -22,7 +22,7 @@ export default function Resume() {
         </div>
       </div>
 
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
@@ -68,7 +68,7 @@ export default function Resume() {
               <div className="w-2 h-2 rounded-sm bg-g-red" />
               Projects & Research
             </h3>
-            
+
             <div className="space-y-6">
               <div className="relative pl-6 border-l border-slate-700">
                 <div className="absolute w-3 h-3 bg-[#0E131A] border-2 border-g-red rounded-full -left-[6.5px] top-1.5" />
@@ -117,12 +117,12 @@ export default function Resume() {
             </h3>
             <div className="relative pl-6 border-l border-slate-700 space-y-4">
               <div className="absolute w-3 h-3 bg-[#0E131A] border-2 border-g-yellow rounded-full -left-[6.5px] top-1.5" />
-              
+
               <div>
                 <h4 className="text-sm font-bold">Workshop Lead, ASTHRA 10.0</h4>
                 <p className={cn("text-sm", isLight ? "text-gray-600" : "text-slate-400")}>Conducted technical workshops simplifying complex concepts into practical learning modules.</p>
               </div>
-              
+
               <div>
                 <h4 className="text-sm font-bold">Public Speaker, Sudo Learn Talks</h4>
                 <p className={cn("text-sm", isLight ? "text-gray-600" : "text-slate-400")}>Delivered talks on emerging technologies and AI systems.</p>
